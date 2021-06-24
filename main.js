@@ -8,7 +8,7 @@ let string = `/* 你好，我是zdj，一名前端小白
   border: 1px solid red;
   width:200px;
   height:200px;
-  animation: ro 30s infinite ;
+  animation: ro 15s infinite ;
 }
 /* 接下来生成太极
  * 首先变成一个圆
@@ -71,6 +71,6 @@ function step() {
       n += 1
       step()
     }
-  }, 0)
+  }, 30)
 }
 step()
