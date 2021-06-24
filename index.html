@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="text"></div>
+    <div id="wrapper">
+      <div id="taiji"></div>
+      <!-- <span id="quan"><img src="quan.png" alt="" /></span> -->
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      *::after {
+        box-sizing: border-box;
+      }
+
+      *::before {
+        box-sizing: border-box;
+      }
+      #text {
+        word-break: break-all;
+      }
+      #wrapper {
+        position: fixed;
+        width: 400px;
+        height: 400px;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #taiji {
+        position: absolute;
+        margin: 0 auto;
+        top: 25%;
+        left: 25%;
+        /* transform: translate(-50%, -50%, 0); */
+      }
+      #taiji::before {
+        display: block;
+        content: '';
+        position: absolute;
+      }
+      #taiji::after {
+        display: block;
+        content: '';
+        position: absolute;
+      }
+      @keyframes ro {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (max-width: 500px) {
+        #text {
+          height: 50vh;
+          overflow: auto;
+        }
+
+        #wrapper {
+          position: relative;
+          left: 0;
+          transform: translateX(0);
+          width: 100vw;
+          height: 50vh;
+        }
+      }
+    </style>
+    <style id="style"></style>
+    <script src="index.js"></script>
+  </body>
+</html>
